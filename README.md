@@ -64,3 +64,10 @@ Due to size constraints, the dataset is not included in this repository.
 
 You can download it from:
 https://www.kaggle.com/datasets/wordsforthewise/lending-club
+
+## Web Application (Streamlit)
+A Streamlit-based dashboard was developed to simulate real-world credit risk assessment.  
+Users can input borrower details and receive default probability, risk classification, and decision recommendations.
+
+The UI also highlights key risk drivers to improve model interpretability.
+
