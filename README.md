@@ -1,73 +1,84 @@
-Project Title
+# 💳 Credit Risk & Loan Default Prediction
 
-Credit Risk & Loan Default Prediction using Machine Learning
+## 📌 Overview
+An end-to-end credit risk prediction system built using machine learning to estimate the probability of loan default from borrower financial data.  
+The project emphasizes interpretability, risk ranking, and business relevance, which are critical in financial applications.
 
-Overview
+---
 
-This project builds an end-to-end credit risk prediction system to estimate the probability of loan default using real-world Lending Club data. The objective is to identify risky borrowers while maintaining interpretability and business relevance.
+## 🏦 Problem Statement
+Predict whether a borrower is likely to default on a loan, framed as a binary classification problem with focus on identifying risky borrowers.
 
-Dataset
+---
 
-Source: Lending Club (Accepted Loans)
+## 📊 Dataset
+- Source: Lending Club (Accepted Loans)
+- Records Used: ~300,000
 
-Size used: ~300,000 records
+> Dataset not included due to size constraints  
+> Download: https://www.kaggle.com/datasets/wordsforthewise/lending-club
 
-Domain: Finance / Credit Risk
+---
 
-Problem Statement
+## 🧠 Approach
+- Selected finance-relevant features such as loan amount, interest rate, income, DTI, FICO score, and employment length
+- Performed domain-aware data preprocessing and feature engineering
+- Trained a Logistic Regression model with class imbalance handling
+- Evaluated performance using ROC-AUC and recall instead of accuracy
+- Interpreted model coefficients for explainability
+- Manually validated high-risk vs low-risk borrower rankings
 
-Predict whether a borrower will default on a loan based on financial and credit attributes.
+---
 
-Approach
+## 📈 Results
+- ROC-AUC: ~0.70
+- Recall (Defaulters): ~63%
 
-Selected finance-relevant features (loan amount, interest rate, income, DTI, FICO, employment length)
+> Accuracy was not over-optimized, as missing defaulters is more costly in credit risk scenarios.
 
-Performed domain-aware data preprocessing and missing value handling
+---
 
-Engineered key risk indicators such as loan-to-income ratio and average FICO score
+## 🌐 Streamlit Web App
+An interactive Streamlit dashboard was built to simulate real-world credit risk assessment.  
+The application provides:
+- Real-time default probability prediction
+- Risk classification (Low / Medium / High)
+- Decision recommendations (Approve / Review / Reject)
+- Key risk driver explanations
 
-Trained a Logistic Regression model with class imbalance handling
+---
 
-Evaluated using recall and ROC-AUC (more suitable than accuracy for credit risk)
+## ☁️ Cloud Integration
+- Exported trained model and scaler using joblib
+- Performed inference using Google Cloud Shell to demonstrate cloud readiness
 
-Manually validated high-risk vs low-risk borrower rankings
+---
 
-Exported the trained model and performed inference on Google Cloud
+## 🛠️ Tech Stack
+- Programming Language: Python  
+- Data Analysis & Processing: Pandas, NumPy  
+- Machine Learning: Scikit-learn (Logistic Regression)  
+- Model Evaluation: ROC-AUC, Recall, Precision  
+- Visualization & UI: Streamlit  
+- Version Control: Git, GitHub  
+- Cloud Platform: Google Cloud (Cloud Shell)  
 
-Model & Evaluation
+---
 
-Model: Logistic Regression
+## 🎯 Key Takeaways
+- Credit risk modeling is primarily a ranking problem
+- Recall and ROC-AUC are more meaningful than accuracy in finance
+- Explainability is essential for real-world ML systems
+- Simple, interpretable models are effective in regulated domains
 
-ROC-AUC: ~0.70
+---
 
-Recall (Defaulters): ~63%
+## 🚀 Future Improvements
+- Threshold optimization based on business cost
+- Advanced explainability using SHAP
+- API-based model deployment
 
-Focused on explainability and risk ranking rather than raw accuracy
+---
 
-Cloud Integration
-
-Exported trained model and scaler using joblib
-
-Ran inference in Google Cloud Shell to demonstrate deployment readiness
-
-Key Learnings
-
-Credit risk modeling is a ranking problem, not just classification
-
-Recall and ROC-AUC are more important than accuracy in finance
-
-Model explainability is crucial for real-world decision-making
-
-## Dataset
-The dataset used in this project is the Lending Club Accepted Loans dataset.
-Due to size constraints, the dataset is not included in this repository.
-
-You can download it from:
-https://www.kaggle.com/datasets/wordsforthewise/lending-club
-
-## Web Application (Streamlit)
-A Streamlit-based dashboard was developed to simulate real-world credit risk assessment.  
-Users can input borrower details and receive default probability, risk classification, and decision recommendations.
-
-The UI also highlights key risk drivers to improve model interpretability.
-
+## 👨‍💻 Author
+Abhinav Thakur
