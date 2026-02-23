@@ -45,7 +45,7 @@ The application provides:
 - Risk classification (Low / Medium / High)
 - Decision recommendations (Approve / Review / Reject)
 - Key risk driver explanations
-
+Live Demo: https://credit-risk-prediction-mlproject.streamlit.app/
 ---
 
 ## ☁️ Cloud Integration
